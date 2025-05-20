@@ -1,0 +1,418 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منهج اللغة العربية للصف الأول الإعدادي - الترم الثاني 2024/2025</title>
+    <meta name="description" content="موقع تفاعلي لشرح منهج اللغة العربية للصف الأول الإعدادي مع تدريبات وامتحانات تفاعلية">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+        
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #F5DEB3;
+            --accent-color: #CD853F;
+            --text-dark: #333333;
+            --text-light: #F8F8FF;
+            --background-light: #FFF8E7;
+            --background-dark: #5D5D5D;
+        }
+        
+        body {
+            font-family: 'Amiri', serif;
+            background-color: var(--background-light);
+            color: var(--primary color);
+        }
+                h1, h2, h3, h4, h5, h6 {
+            font-family: 'Reem Kufi', sans-serif;
+        }
+
+        .header {
+            background-color: var(--secondary-color);
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+        
+        .main-title {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .hero-section {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            padding: 3rem 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border: 1px solid var(--accent-color);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+        
+        .button-primary {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button-primary:hover {
+            background-color: var(--accent-color);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            height: 10px;
+        }
+        
+        .progress {
+            background-color: var(--accent-color);
+            height: 10px;
+            border-radius: 10px;
+        }
+        
+        .content-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tab-button {
+            padding: 0.75rem 1rem;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 4px 4px 0 0;
+            margin-right: 2px;
+        }
+        
+        .tab-button.active {
+            background-color: white;
+            border-bottom: 3px solid var(--accent-color);
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 0 0 4px 4px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .fullscreen-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow: auto;
+        }
+        
+        .modal-content {
+            margin: 5% auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 8px;
+        }
+        
+        .close-button {
+            color: #aaa;
+            float: left;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: right;
+        }
+        
+        th {
+            background-color: var(--secondary-color);
+        }
+        
+        .quiz-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .question {
+            margin-bottom: 1.5rem;
+        }
+        
+        .options label {
+            display: block;
+            margin: 8px 0;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .options label:hover {
+            background-color: #f5f5f5;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .navbar-items {
+                margin-top: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+            .feature-container {
+                flex-direction: column;
+            }
+            .feature-card {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header py-4">
+        <div class="container mx-auto px-4">
+            <nav class="navbar flex justify-between items-center">
+                <div class="text-2xl main-title">اللغة العربية</div>
+                <div class="navbar-items flex space-x-4 space-x-reverse">
+                    <a href="#home" class="mx-3 hover:text-accent-color">الرئيسية</a>
+                    <a href="main_arabic.html" class="mx-3 hover:text-accent-color">المنهج الدراسي</a>
+                    <a href="exams.html" class="mx-3 hover:text-accent-color">اختبر نفسك</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="container mx-auto px-4">
+        <div class="hero-section text-center">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">منهج اللغة العربية - الصف الأول الإعدادي</h1>
+            <p class="text-xl mb-4">الترم الثاني 2024/2025</p>
+            <p class="text-lg mb-8">مرحباً بك في موقعنا التفاعلي لشرح منهج اللغة العربية للصف الأول الإعدادي. استمتع برحلة ممتعة في عالم اللغة العربية الجميل.</p>
+            <a href="arabic.html" class="button-primary inline-block">استكشف المنهج</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mx-auto px-4 py-8">
+        <h2 class="section-title text-2xl md:text-3xl text-center mb-8">مميزات الموقع</h2>
+        <p class="text-lg text-center mb-8">يقدم موقعنا العديد من الميزات التي تساعدك على فهم منهج اللغة العربية بطريقة سهلة وممتعة:</p>
+        
+        <div class="feature-container flex flex-wrap justify-between">
+            <div class="feature-card w-full md:w-[32%] p-6 mb-6">
+                <div class="text-center">
+                    <i class="fas fa-book feature-icon mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">شرح المنهج</h3>
+                    <p>شرح مفصل لجميع دروس المنهج بأسلوب سهل وبسيط يناسب جميع الطلاب.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card w-full md:w-[32%] p-6 mb-6">
+                <div class="text-center">
+                    <i class="fas fa-brain feature-icon mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">تدريبات تفاعلية</h3>
+                    <p>مجموعة متنوعة من التدريبات التفاعلية لتثبيت المعلومات وتنمية المهارات اللغوية.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card w-full md:w-[32%] p-6 mb-6">
+                <div class="text-center">
+                    <i class="fas fa-clipboard-check feature-icon mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">اختبارات متنوعة</h3>
+                    <p>اختبارات شاملة لقياس مستوى الطالب وتحديد نقاط القوة والضعف لديه.</p>
+                </div>
+            </div>
+
+            <div class="feature-card w-full md:w-[32%] p-6 mb-6">
+                <div class="text-center">
+                    <i class="fas fa-chart-line feature-icon mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">متابعة تقدمك</h3>
+                    <p>تتبع مستوى تقدمك في المنهج ومعرفة ما تم إنجازه وما هو متبقي.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card w-full md:w-[32%] p-6 mb-6">
+                <div class="text-center">
+                    <i class="fas fa-laptop feature-icon mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">تعلم تفاعلي</h3>
+                    <p>أدوات تفاعلية لجعل عملية التعلم أكثر متعة وفعالية.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card w-full md:w-[32%] p-6 mb-6">
+                <div class="text-center">
+                    <i class="fas fa-video feature-icon mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">فيديوهات تعليمية</h3>
+                    <p>فيديوهات موصى بها لفهم أعمق للمواضيع المختلفة في المنهج.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Price -->
+    <section class="container mx-auto px-4 py-4 mb-8">
+        <div class="bg-yellow-100 p-6 rounded-md text-center border-2 border-yellow-400">
+            <h3 class="text-2xl font-bold mb-2">سعر المذكرة</h3>
+            <p class="text-lg mb-2">فقط <span class="text-2xl font-bold text-green-600">20 جنيه</span> للحصول على المذكرة الشاملة</p>
+            <p>استثمار بسيط لتحقيق أعلى الدرجات في مادة اللغة العربية!</p>
+        </div>
+    </section>
+
+        <div class="content-box mt-8">
+            <h3 class="text-xl font-bold mb-4">روابط لمذكرات أخرى</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="https://drive.google.com/file/d/1BpggT-1OnTLmURVoZj9SOscWGeffPbql/view?pli=1" class="p-4 bg-gray-100 rounded hover:bg-gray-200 transition-colors text-center">مذكرة شاملة لمادة اللغة العربية</a>
+                <a href="main_arabic.html" class="p-4 bg-gray-100 rounded hover:bg-gray-200 transition-colors text-center">بنك أسئلة للصف الأول الإعدادي</a>
+                <a href="https://drive.google.com/file/d/1Jt_dsLULunjqlC8M3ktDaKMHxkveB805/view" class="p-4 bg-gray-100 rounded hover:bg-gray-200 transition-colors text-center">نماذج امتحانات مجابة</a>
+                <a href="" class="p-4 bg-gray-100 rounded hover:bg-gray-200 transition-colors text-center">موقع Math</a>
+                <a href="" class="p-4 bg-gray-100 rounded hover:bg-gray-200 transition-colors text-center">موقع Science</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Recommendations -->
+    <section class="container mx-auto px-4 py-8">
+        <h2 class="section-title text-2xl md:text-3xl text-center mb-8">فيديوهات مُوصى بها</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <p>شرح مفصل لقواعد النحو للصف الأول الإعدادي</p>
+                <a href="https://www.youtube.com/watch?v=LPPrvlf4hvY&t=10s" class="text-accent-color hover:underline mt-2 inline-block">مشاهدة الفيديو</a>
+            </div>
+
+                </div>
+                <p>شرح المنهج كامل</p>
+                <a href="https://youtu.be/1hX2Wa0cQF4?si=t6OGH7YY_IJ7AZdF" class="text-accent-color hover:underline mt-2 inline-block">مشاهدة الفيديو</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>© 2025 جميع الحقوق محفوظة - منهج اللغة العربية للصف الأول الإعدادي</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <script>
+        // Toggle accordion
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+        
+        // Tab functionality
+        function openTab(evt, tabName) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            const tabButtons = document.getElementsByClassName("tab-button");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+        
+        // Fullscreen functionality
+        function openFullscreen(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+        
+        function closeFullscreen(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName("fullscreen-modal");
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                    document.body.style.overflow = "auto";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+        
